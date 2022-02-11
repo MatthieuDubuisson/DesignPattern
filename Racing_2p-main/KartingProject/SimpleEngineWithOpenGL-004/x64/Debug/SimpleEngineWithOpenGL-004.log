@@ -1,0 +1,5 @@
+﻿C:\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (SimpleEngineWithOpenGL-004.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
+  Grid.cpp
+D:\GAME3\Dubuisson Matthieu\Racing_2p-main\KartingProject\SimpleEngineWithOpenGL-004\Grid.cpp(11,20): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+D:\GAME3\Dubuisson Matthieu\Racing_2p-main\KartingProject\SimpleEngineWithOpenGL-004\Grid.cpp(12,20): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+  SimpleEngineWithOpenGL-004.vcxproj -> D:\GAME3\Dubuisson Matthieu\Racing_2p-main\KartingProject\x64\Debug\Karting.exe
