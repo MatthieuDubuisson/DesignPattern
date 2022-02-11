@@ -20,6 +20,7 @@ Car::Car(const char* texturepath, SDL_Renderer* ren, int x, int y)
 	twoPi = pi * 2.0f;
 	nbLaps = 0.0f;
 	isOnRoad = false;
+	carPos = Vector2(posX, posY);
 }
 
 Car::~Car()
@@ -154,6 +155,11 @@ void Car::move(std::string direction)
 		rotation += 0.012 * pi;
 		angleRotation -=  pi/1.455;
 	}
+}
+
+Vector2 Car::getCarPos()
+{
+	return carPos;
 }
 
 Vector2 Car::getForward() const

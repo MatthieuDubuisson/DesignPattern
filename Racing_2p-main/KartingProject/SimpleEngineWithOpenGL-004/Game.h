@@ -1,7 +1,8 @@
 #pragma once
 #include "SDL.h"
 #include <SDL_image.h>
-
+#include "Grid.h"
+#include <memory>
 
 class Game
 {
@@ -25,5 +26,6 @@ private:
 	SDL_Texture* dataTexture;
 	SDL_Window* window;
 	SDL_Renderer* renderer;
+	std::unique_ptr<Grid> m_grid; // spatial partition grid for collision
 };
 

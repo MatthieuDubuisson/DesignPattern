@@ -15,6 +15,7 @@ private:
 	float twoPi;
 	float nbLaps;
 	bool isOnRoad;
+	Vector2 carPos;
 
 	void collisionDetection();
 	void lapsDetection();
@@ -25,6 +26,7 @@ public:
 	virtual void update() override;
 	void move(std::string direction);
 
+	Vector2 getCarPos();
 	Vector2 getForward() const;
 	int getMaxSpeed();
 	int getSpeed();

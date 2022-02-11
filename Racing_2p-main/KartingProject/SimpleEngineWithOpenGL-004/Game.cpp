@@ -3,6 +3,7 @@
 #include "Car.h"
 #include "Car2.h"
 #include "TexturesManager.h"
+#include "Grid.h"
 #include <SDL.h>
 #include <sstream>
 #include <iostream>
@@ -20,6 +21,8 @@ Game::~Game()
 }
 
 	//init players and textures
+const int CELL_SIZE = 100;
+
 Car *car;
 Car2 *car2;
 const Uint8* keyState;
@@ -73,6 +76,9 @@ void Game::init(const char* title, int posX, int posY, int width, int height)
 	scrRect.h = 600;
 	backgroundRect.w = 800;
 	backgroundRect.h = 600;
+
+	//Load our Grid
+	m_grid = std::make_unique<Grid>(backgroundRect.w, backgroundRect.h, CELL_SIZE);
 
 	//player1
 	playerSpritePath = "Resources\\player1Car.png";
@@ -177,6 +183,7 @@ void Game::update()
 
 	car->update();
 	car2->update();
+	m_grid->addCar(car->getCarPos(), car);
 
 //Player1 counter update
 
